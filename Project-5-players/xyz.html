@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Selection</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: space-between;
+        }
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            width: 70%;
+        }
+        .card {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 16px;
+            margin: 8px;
+            width: 30%;
+            text-align: center;
+        }
+        .selected {
+            background-color: #f0f8ff;
+        }
+        .sidebar {
+            width: 20%;
+            padding: 16px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            height: fit-content;
+        }
+        .selected-list {
+            margin-top: 16px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="cards">
+        <div class="card">
+            <p class="card-name">Card 1</p>
+            <button class="select-button">Select</button>
+        </div>
+        <div class="card">
+            <p class="card-name">Card 2</p>
+            <button class="select-button">Select</button>
+        </div>
+        <div class="card">
+            <p class="card-name">Card 3</p>
+            <button class="select-button">Select</button>
+        </div>
+        <div class="card">
+            <p class="card-name">Card 4</p>
+            <button class="select-button">Select</button>
+        </div>
+        <div class="card">
+            <p class="card-name">Card 5</p>
+            <button class="select-button">Select</button>
+        </div>
+        <div class="card">
+            <p class="card-name">Card 6</p>
+            <button class="select-button">Select</button>
+        </div>
+    </div>
+    <div class="sidebar">
+        <h3>Total Selected Cards: <span id="selected-count">0</span></h3>
+        <div class="selected-list">
+            <h4>Selected Cards:</h4>
+            <ul id="selected-cards-list"></ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const selectButtons = document.querySelectorAll('.select-button');
+        const selectedCountSpan = document.getElementById('selected-count');
+        const selectedCardsList = document.getElementById('selected-cards-list');
+        let selectedCount = 0;
+        let selectedCards = [];
+
+        selectButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const card = button.parentElement;
+                const cardName = card.querySelector('.card-name').textContent;
+                if (!card.classList.contains('selected')) {
+                    card.classList.add('selected');
+                    selectedCount++;
+                    selectedCards.push(cardName);
+                } else {
+                    card.classList.remove('selected');
+                    selectedCount--;
+                    selectedCards = selectedCards.filter(name => name !== cardName);
+                }
+                selectedCountSpan.textContent = selectedCount;
+                updateSelectedCardsList(selectedCards, selectedCardsList);
+            });
+        });
+
+        function updateSelectedCardsList(cards, listElement) {
+            listElement.innerHTML = '';
+            cards.forEach(card => {
+                const listItem = document.createElement('li');
+                listItem.textContent = card;
+                listElement.appendChild(listItem);
+            });
+        }
+    });
+</script>
+
+</body>
+</html>

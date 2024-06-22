@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multiplication with Card Selection</title>
+    <style>
+        .card {
+            display: inline-block;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        .selected {
+            border-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Multiplication with Card Selection</h1>
+
+    <label for="num1">Enter first number:</label>
+    <input type="number" id="num1"><br><br>
+
+    <label for="num2">Enter second number:</label>
+    <input type="number" id="num2"><br><br>
+
+    <div>
+        <div class="card">Card 1</div>
+        <div class="card">Card 2</div>
+        <div class="card">Card 3</div>
+        <div class="card">Card 4</div>
+        <div class="card">Card 5</div>
+    </div><br>
+
+    <button onclick="multiplyWithSelectedCards()">Multiply</button>
+
+    <p id="result"></p>
+
+    <!-- Link to the external JavaScript file -->
+    <script src="demo.js"></script>
+</body>
+</html>

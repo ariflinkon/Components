@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Top 5 Players</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100">
+    <header class="bg-blue-500 text-white py-6">
+        <div class="height-bg container mx-auto text-center">
+            <h1 class="text-3xl font-bold">Select Top 5 Players</h1>
+            <p class="text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+    </header>
+
+    <main class="container mx-auto mt-8 flex">
+        <div class="w-3/4 pr-4">
+            <!-- Left Column -->
+            <div class="grid grid-cols-3 gap-4">
+                <!-- Card 1 -->
+                <div class="bg-white rounded-lg shadow-md p-4">
+                    <img src="images/player1.jpeg" alt="Player 1" class="w-full h-40 object-cover mb-4">
+                    <h2 class="player-name text-xl font-semibold">Player 1 Name</h2>
+                    <button class="select-button bg-blue-500 text-white py-2 px-4 mt-2 rounded">Select</button>
+                    
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-white rounded-lg shadow-md p-4">
+                    <img src="images/player1.jpeg" alt="Player 2" class="w-full h-40 object-cover mb-4">
+                    <h2 class="player-name text-xl font-semibold">Player 2 Name</h2>
+                    <button class="select-button bg-blue-500 text-white py-2 px-4 mt-2 rounded">Select</button>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-white rounded-lg shadow-md p-4">
+                    <img src="images/player1.jpeg" alt="Player 3" class="w-full h-40 object-cover mb-4">
+                    <h2 class="player-name text-xl font-semibold">Player 3 Name</h2>
+                    <button class="select-button bg-blue-500 text-white py-2 px-4 mt-2 rounded">Select</button>
+                </div>
+                <!-- Card 4 -->
+                <div class="bg-white rounded-lg shadow-md p-4">
+                    <img src="images/player1.jpeg" alt="Player 4" class="w-full h-40 object-cover mb-4">
+                    <h2 class="player-name text-xl font-semibold">Player 4 Name</h2>
+                    <button class="select-button bg-blue-500 text-white py-2 px-4 mt-2 rounded">Select</button>
+                </div>
+                <!-- Card 5 -->
+                <div class="bg-white rounded-lg shadow-md p-4">
+                    <img src="images/player1.jpeg" alt="Player 5" class="w-full h-40 object-cover mb-4">
+                    <h2 class="player-name text-xl font-semibold">Player 5 Name</h2>
+                    <button class="select-button bg-blue-500 text-white py-2 px-4 mt-2 rounded">Select</button>
+                </div>
+                <!-- Card 6 -->
+                <div class="bg-white rounded-lg shadow-md p-4">
+                    <img src="images/player1.jpeg" alt="Player 6" class="w-full h-40 object-cover mb-4">
+                    <h2 class="player-name text-xl font-semibold">Player 6 Name</h2>
+                    <button class="select-button bg-blue-500 text-white py-2 px-4 mt-2 rounded">Select</button>
+                </div>
+            </div>
+        </div>
+        <!-- Right Column -->
+    
+<div class="w-1/4">
+
+   <!--  <div class="sidebar">
+        <h3>Total Selected Cards: <span id="selected-count">0</span></h3>
+        <div class="selected-list">
+            <h4>Selected Cards:</h4>
+            <ul id="selected-cards-list"></ul>
+        </div>
+    </div> -->
+
+    <!-- Sidebar -->
+    <div class="p-4 rounded-lg">
+        <h2  class="text-xl font-semibold mb-4">Players Counts:<span id="selected-count">0</span> </h2>
+        <!-- List of selected players -->
+        <div class="selected-list">
+            <h4>Selected Cards:</h4>
+        <ul id="selected-cards-list"> </ul>
+            <!-- Add other selected players here -->
+    </div>
+    <!-- Budget Calculator Form -->
+    <div class="mt-8">
+        <h2 class="text-xl font-semibold mb-4">Budget</h2>
+        <form id="budget-form">
+            <label class="block mb-2">Per player:</label>
+            <input type="number" id="budget-per-player" class="w-full px-4 py-2 rounded-md border border-gray-300 mb-4" placeholder="Enter your budget">
+            <button onclick="multiplyNumbers()" class="w-full bg-blue-500 text-white py-2 rounded-md">Calculate</button>
+            <div id="player-total-value" class="mt-4 text-xl font-semibold">Total Players Budget:</div>
+        </form>
+        <form id="manager-form">
+            <label class="block mb-2">Manager:</label>
+            <input type="number" id="manager-budget" class="w-full px-4 py-2 rounded-md border border-gray-300 mb-4" placeholder="Enter manager budget">
+        </form>
+        <form id="coach-form">
+            <label class="block mb-2">Coach:</label>
+            <input type="number" id="coach-budget" class="w-full px-4 py-2 rounded-md border border-gray-300 mb-4" placeholder="Enter coach budget">
+        </form>
+        <button type="button" id="total-calculate" class="w-full bg-blue-500 text-white py-2 rounded-md">Total Calculate</button>
+        <div id="total-value" class="mt-4 text-xl font-semibold">Total Budget:</div>
+    </div>
+</div>
+
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

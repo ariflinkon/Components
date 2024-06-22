@@ -1,0 +1,10 @@
+body {
+    display: block;
+    margin: 00px;
+    
+}
+
+.disabled {
+    background-color: #cccccc; /* Set the background color to grey */
+    cursor: not-allowed; /* Change cursor to not-allowed */
+}

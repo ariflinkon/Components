@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Bank Calculator</h1>
+    </header>
+    <main>
+        <section class="summary">
+            <div class="card">
+                <h2>Deposit</h2>
+                <p>$00</p>
+            </div>
+            <div class="card">
+                <h2>Withdraw</h2>
+                <p>$00</p>
+            </div>
+            <div class="card">
+                <h2>Balance</h2>
+                <p>$1299</p>
+            </div>
+        </section>
+        <section class="actions">
+            <form id="deposit-form">
+                <label for="deposit-amount">Your Deposit</label>
+                <input type="text" id="deposit-amount" placeholder="$ Amount you want to deposit">
+                <button type="submit">Deposit</button>
+            </form>
+            <form id="withdraw-form">
+                <label for="withdraw-amount">Your Withdraw</label>
+                <input type="text" id="withdraw-amount" placeholder="$ Amount you want to withdraw">
+                <button type="submit">Withdraw</button>
+            </form>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
