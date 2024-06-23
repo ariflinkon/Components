@@ -1,8 +1,17 @@
-let first;
+let first; //variable declaration
 
-let balerCoder = (function(a, b) {
-    first = a + b;
-    return first;
-})(4, 2);
+//immediately invoked function expression (IIFE)
+//     (function(a,b) {..........})
+//   (function(a,b) {............})
 
-console.log(balerCoder, first);
+
+let balerCoder = (
+    
+    function(a,b) {
+        first = a+b;
+        return first;
+    }
+
+)(4,2);
+
+console.log(balerCoder);
