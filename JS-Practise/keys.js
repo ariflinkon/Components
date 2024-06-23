@@ -1,13 +1,14 @@
-const bioData = {
-Name: 'Laiba Bekkol',
-Character: 'Jogrute',
-Pesha: 'Jogra kora',
-DailyJograLimit: 10
-}; 
+class Calculator {
+    /* constructor() {
+        this.first = 0;
+    } */
 
-//console.log(bioData);
-const keys = Object.keys(bioData);
-console.log(keys);
+    second(a, b) {
+        this.first = a + b;
+        return this.first;
+    }
+}
 
-const x = Object.isSealed(bioData);
-console.log(x);
+let sum = new Calculator();
+let balerCoder = sum.second(4, 2);
+console.log(balerCoder, sum.first);
