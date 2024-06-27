@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+     <h1>Button Test</h1>
+     <button onclick="buttonClick()" id="button-click">Submit</button>
+     <button id="button-event">Submit Event</button>
+
+     <script>
+
+        function buttonClick() {
+            let click = document.getElementById('button-click')
+            alert('Button was Clicked');
+
+        };
+
+        document.getElementById('button-event').addEventListener('click', function() {
+
+            let clickOnButton = document.getElementById('button-event');
+
+
+        })
+
+
+     </script>
+</html>
